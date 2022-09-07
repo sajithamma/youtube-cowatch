@@ -1,22 +1,23 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
+import Image from "next/image";
 
 
 //To pre-load images
-class Preload extends Component{
+class Preload extends Component {
 
-    render = () =>{
+    render = () => {
 
 
-        return(<>
-        
-                <div style={{display:"none"}}>
-                
-                        <img src="/cam-off.png"/>
-                        <img src="/cam-on.png"/>
-                        <img src="/mic-off.png"/>
-                        <img src="/mic-on.png"/>
+        return (<>
 
-                </div>
+            <div style={{ display: "none" }}>
+
+                <Image alt="camoff" src="/cam-off.png" />
+                <Image alt="camon" src="/cam-on.png" />
+                <Image alt="micoff" src="/mic-off.png" />
+                <Image alt="micon" src="/mic-on.png" />
+
+            </div>
 
         </>)
     }

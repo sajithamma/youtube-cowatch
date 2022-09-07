@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react';
-import { useRouter } from 'next/router'
+import Script from 'next/script'
+import Image from 'next/image'
 
 
 import Head from 'next/head';
@@ -524,13 +525,11 @@ class Youtube extends Component {
                     <title>Volcano - Living Videos</title>
                     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-                    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
-
 
                 </Head>
+
+                <Script src="https://code.jquery.com/jquery-1.12.4.js"></Script>
+                <Script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></Script>
 
 
 
@@ -567,11 +566,11 @@ class Youtube extends Component {
 
                                 <div className={styles.playercontrols}>
 
-                                    <a href="#" onClick={this.seek10Backward}><img src="/left10.png" /></a>
+                                    <a href="#" onClick={this.seek10Backward}><Image alt="left" src="/left10.png" /></a>
 
                                     {this.state.youtubesound &&
                                         <>
-                                            <a href="#" onClick={this.muteYoutube}><img src="/youtube-sound-on.png" /></a>
+                                            <a href="#" onClick={this.muteYoutube}><Image alt="soundon" src="/youtube-sound-on.png" /></a>
 
                                         </>
 
@@ -579,7 +578,7 @@ class Youtube extends Component {
 
                                     {!this.state.youtubesound &&
                                         <>
-                                            <a href="#" onClick={this.unMuteYoutube}><img src="/youtube-sound-off.png" /></a>
+                                            <a href="#" onClick={this.unMuteYoutube}><Image alt="soundoff" src="/youtube-sound-off.png" /></a>
                                         </>
 
                                     }
@@ -588,7 +587,7 @@ class Youtube extends Component {
                                     {this.state.youtubeplay &&
                                         <>
 
-                                            <a href="#" onClick={this.pauseYoutube} id="youtubepause"><img src="/pause.png" /></a>
+                                            <a href="#" onClick={this.pauseYoutube} id="youtubepause"><Image alt="pause" src="/pause.png" /></a>
 
                                         </>
 
@@ -597,13 +596,13 @@ class Youtube extends Component {
                                     {!this.state.youtubeplay &&
                                         <>
 
-                                            <a href="#" onClick={this.playYoutube}><img src="/play.png" /></a>
+                                            <a href="#" onClick={this.playYoutube}><iImage alt="play" src="/play.png" /></a>
 
                                         </>
 
                                     }
 
-                                    <a href="#" onClick={this.seek10Forward}><img src="/right10.png" /></a>
+                                    <a href="#" onClick={this.seek10Forward}><Image alt="right" src="/right10.png" /></a>
 
                                     <div className={styles.changeURL}>
                                         <input type="text" id="youtubeurl" onKeyUp={this.onYoutubeKeyup} defaultValue={"https://www.youtube.com/watch?v=" + this.youtube_id} />
@@ -640,7 +639,7 @@ class Youtube extends Component {
 
                             <div className={styles.slidecontainer}>
 
-                                <input type="range" min="1" max="100" value={(this.state.youtubeCurrentTime / this.state.youtubeDuration) * 100} class={styles.slider} id="seekbar" onInput={this.SeekBarOninput} />
+                                <input type="range" min="1" max="100" value={(this.state.youtubeCurrentTime / this.state.youtubeDuration) * 100} className={styles.slider} id="seekbar" onInput={this.SeekBarOninput} />
 
                             </div>
 
@@ -660,7 +659,7 @@ class Youtube extends Component {
 
                             <p>HEADPHONES are highly recommended to avoid ECHO.</p>
 
-                            <p><b>Participants:</b> Clicking on 'GO LIVE' will switch on your
+                            <p><b>Participants:</b> Clicking on GO LIVE will switch on your
                                 camera &amp; mic, grant permission when asked. </p>
 
 

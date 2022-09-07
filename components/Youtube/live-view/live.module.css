@@ -1,0 +1,234 @@
+
+.live{
+    margin-top: 4%;
+}
+.line{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.red{
+    display: flex;
+    justify-content: space-evenly;
+    width: 115px;
+    height: 30px;
+    background-color: #C51200;
+    color: white;
+    margin-left: 1px;
+}
+.red i{
+    font-size: 22px;
+    padding-top: 5px;
+}
+.line h4{
+    margin: 4px;
+    font-size: 1.3em;
+    font-stretch: ultra-condensed;
+}
+.graph{
+    width: 10em;
+}
+.live p{
+    color: white;
+    font-size: 1.5em;
+    margin: 1px 5px;
+   font-weight: bold;
+   font-stretch: ultra-condensed;
+}
+.live h5{
+    color: #FDA027;
+    margin:3px 2px;
+    font-size: 1em;
+}
+.live small{
+    color: white;
+    margin:0 2px;
+    font-size: .8em;
+}
+
+@media screen and (max-width:1024px){
+    .live{
+        margin-top: 3%;
+    }
+    .line h4{
+        font-size: 1.1em;
+        margin: 5px;
+    }
+    .live p{
+        font-size: 1.4em;
+        margin: 4px 6px;
+    }
+    .live h5{
+        font-size: 1em;
+    }
+    .live small{
+        font-size: .8em;
+    }
+    .red{
+        width: 105px;
+        height: 30px;
+        margin-left: 3px;
+    }
+    .red i{
+        font-size: 20px;
+        padding-top: 5px;
+    }
+}
+@media screen and (max-width:800px){
+    .line h4{
+        font-size: 1em;
+        margin: 4px;
+    }
+    .live p{
+        font-size: 1.2em;
+        margin: 4px 6px;
+    }
+    .live h5{
+        font-size: .9em;
+    }
+    .live small{
+        font-size: .7em;
+    }
+    .red{
+        width: 100px;
+        height: 28px;
+        margin-left: 3px;
+    }
+    .red i{
+        font-size: 18px;
+        padding-top: 3px;
+    }
+    .graph{
+        width: 9em;
+    }
+    
+}
+
+@media screen and (max-width:750px){
+    .line h4{
+        font-size: 1em;
+        margin: 5px;
+    }
+    .live p{
+        font-size: 1.2em;
+        margin: 4px 6px;
+    }
+    .live h5{
+        font-size: .9em;
+    }
+    .live small{
+        font-size: .7em;
+    }
+    .red{
+        width: 90px;
+        height: 28px;
+        margin-left: 3px;
+    }
+    .red i{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    .graph{
+        width: 8.5em;
+    }
+}
+@media screen and (max-width:640px){
+
+    .graph{
+        width: 7.5em;
+    }
+    .line h4{
+        font-size: .9em;
+        margin: 4px ;
+    }
+    .live p{
+        font-size: 1em;
+        margin: 4px 5px;
+    }
+    .live h5{
+        font-size: .8em;
+    }
+    .live small{
+        font-size: .6em;
+    }
+    .red{
+        width: 75px;
+        height: 24px;
+        margin-left: 3px;
+    }
+   
+    .red i{
+        font-size: 16px;
+        padding-top: 4px;
+    }
+
+}
+@media screen and (max-width:500px){
+   
+   
+   
+    .line h4{
+        font-size: .6em;
+        margin: 3px;
+    }
+    .live p{
+        font-size: .7em;
+        margin: 5px 3px;
+    }
+    .live h5{
+        font-size: .5em;
+    }
+    .live small{
+        font-size: .4em;
+        
+    }
+    .red{
+        width: 60%;
+        height: 15px;
+        margin-top: 4px;
+    }
+    .red i{
+        padding-top: 3px;
+        padding-left: 4px;
+        font-size: 10px;
+    }
+    .graph{
+        width: 4.5em;
+    }
+
+}
+
+@media screen and (max-width:350px){
+    .live{
+        margin-top: 6%;
+    }
+    .line h4{
+        font-size: .6em;
+        margin: 4px;
+    }
+    .live p{
+        font-size: .6em;
+        margin: 4px 5px;
+    }
+    .live h5{
+        font-size: .5.5em;
+    }
+    .live small{
+        font-size: .4em;
+    }
+    .red{
+        width: 60%;
+        height: 18px;
+        margin-top: 0;
+    }
+    .red i{
+        padding-top: 5px;
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    .graph{
+        width: 4.5em;
+    }
+
+}

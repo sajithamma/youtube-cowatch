@@ -1,0 +1,365 @@
+.outerLayer {}
+
+.layer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /*background: rgba(255,100,50, 0.3);*/
+    overflow: hidden;
+}
+
+.footer {
+    align-items: center;
+    width: 100%;
+    background: rgba(110, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    height: 65px;
+    z-index: 10000;
+}
+
+.layer .playercontrols {
+    position: absolute;
+    right: 0px;
+    color: white;
+    z-index: 100;
+
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(40, 40, 40, 0.4);
+    height: 10%;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-top: -2px;
+    padding-top: 23px;
+
+    width: 30%;
+}
+
+.layer .playercontrols img {
+    width: 40px;
+}
+
+.layer .playercontrols img:hover {
+    filter: hue-rotate(200deg);
+}
+
+.layer .playercontrols a {
+    margin: 5px;
+    color: orange;
+    font-size: 10px;
+}
+
+.layer .playercontrols .changeURL {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.layer .playercontrols .changeURL input {
+    width: 100%;
+    border-radius: 13px;
+    background-color: rgba(40, 40, 40, 0.4);
+    border: #cccccc;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.layer .viewersgroup {}
+
+.viewersgroup>div {
+    width: 15%;
+    position: absolute;
+    height: 10%;
+}
+
+.viewersgroup>div:nth-child(1) {
+    left: 2%;
+    top: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.viewersgroup>div:nth-child(2) {
+    right: 2%;
+    top: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.viewersgroup>div:nth-child(3) {
+    left: 2%;
+    bottom: 15%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.viewersgroup>div:nth-child(4) {
+    right: 2%;
+    bottom: 15%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.viewersgroup>div:nth-child(n + 5) {
+    top: 2%;
+    right: 0;
+    width: 10%;
+    position: relative;
+}
+
+.viewer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 160px);
+}
+
+.liveView {
+    position: absolute;
+    right: 0px;
+    top: 2%;
+    z-index: 300;
+    padding: 15px;
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    position: absolute;
+    bottom: 106px;
+    right: 25px;
+}
+
+.timer {
+    position: absolute;
+    color: #888888;
+    left: 5px;
+    top: 5px;
+    z-index: 1001;
+}
+
+.slidecontainer {
+    width: 100%;
+    position: absolute;
+    bottom: 62px;
+    left: 0px;
+    z-index: 200;
+    overflow-x: hidden;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    /*border-radius: 5px;  */
+    background: #cccccc;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-runnable-track,
+.slider::-moz-range-track,
+.slider::-ms-track {
+    background-color: red;
+}
+
+/** FF*/
+.slider::-moz-range-progress {
+    background-color: red;
+}
+
+/* IE*/
+.slider::-ms-fill-lower {
+    background-color: red;
+}
+
+.slider::-ms-fill-upper {
+    background-color: red;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: orange;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    cursor: pointer;
+    z-index: 500;
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        position: absolute;
+        bottom: 92px;
+        right: 8px;
+    }
+
+    .layer .playercontrols .changeURL {
+        top: 60px;
+    }
+
+    .layer .playercontrols .changeURL input {
+        color: orange;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .viewersgroup>div:nth-child(1) {
+        top: 12%;
+    }
+
+    .viewersgroup>div:nth-child(2) {
+        top: 12%;
+    }
+
+    .viewersgroup>div:nth-child(3) {
+        bottom: 12%;
+    }
+
+    .viewersgroup>div:nth-child(4) {
+        bottom: 12%;
+    }
+
+    .layer .playercontrols {
+        width: 80%;
+        margin-top: -26px;
+        padding-top: 23px;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .display {
+        width: 503px;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .display {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .display {
+        width: 100%;
+        height: 100%;
+    }
+
+    .viewer {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: repeat(2, 160px);
+    }
+}
+
+.startupbox {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+}
+
+.startupbox .startupbox_inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    top: 45%;
+    color: white;
+    border-radius: 30px;
+    background: rgba(255, 0, 0, 0.4);
+}
+
+.startupbox .startupbox_container {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 60%;
+}
+
+.startupbox .startupbox_container p {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.startupbox .startupbox_container input {
+    color: orange;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #93510f;
+    padding: 6px;
+    background: rgba(251, 255, 200, 0.2);
+    width: 100%;
+}
+
+.startupbox .startupbox_container a {
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 100px;
+    color: #000;
+    font-weight: 800;
+    font-size: 1.6rem;
+    -webkit-box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+
+.startupbox .startupbox_youtubeinput {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.startupbox .startupbox_youtubeinput input {
+    width: 100%;
+    height: 30px;
+    border-radius: 25px;
+    border: darkred;
+    text-align: center;
+    background: lightyellow;
+}
+
+@media screen and (max-width: 800px) {
+    .startupbox .startupbox_container p {
+        font-size: 0.5rem;
+        line-height: 0.7rem;
+    }
+
+    .startupbox .startupbox_container a {
+        border-radius: 50px;
+        font-size: 0.6rem;
+    }
+
+    .startupbox .startupbox_inner {
+        width: 80%;
+        height: 60%;
+    }
+}

@@ -1,0 +1,116 @@
+.topvideo {
+  position: fixed;
+
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 8%;
+  overflow: hidden;
+}
+
+.topvideo video {
+  width: 100%;
+  object-fit: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  position: absolute;
+}
+
+.topvideo .youtubeplayer {
+  bottom: 100px;
+  right: 0px;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  /*filter: sepia(1);*/
+}
+
+.topvideo p {
+  position: absolute;
+  color: white;
+  z-index: 200;
+  top: 0;
+  left: 2em;
+  font-size: 0.8em;
+}
+.topvideo i {
+  margin-left: 30em;
+  transform: translateY(-10px);
+}
+.topvideo i:hover {
+  cursor: pointer;
+}
+.pause {
+  position: absolute;
+  color: white;
+  z-index: 200;
+  margin-left: -60%;
+  margin-top: -8em;
+}
+.changeTime {
+  position: absolute;
+  margin: -6% 0 0 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #fff;
+}
+.input {
+  position: absolute;
+  width: 80%;
+  height: 30px;
+  top: 0;
+  margin: 3% 10%;
+  border: 1px solid red;
+  background-color: rgba(128, 128, 128, 0.4);
+  z-index: 300;
+  text-align: center;
+  color: white;
+}
+.input::placeholder {
+  color: white;
+  text-align: center;
+}
+.round {
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: -4px;
+  margin-left: 10px;
+}
+.round:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 100px) {
+  .pause {
+    margin-left: -240px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .pause {
+    margin-left: -250px;
+    margin-top: -130px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .input {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .pause {
+    margin-left: -350px;
+    margin-top: -150px;
+  }
+  .topvideo i {
+    margin-left: 40em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .topvideo .youtubeplayer {
+    height: 230px;
+  }
+}

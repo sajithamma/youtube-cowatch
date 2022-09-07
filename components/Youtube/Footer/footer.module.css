@@ -1,0 +1,198 @@
+.contain {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  z-index: 200;
+}
+
+.contain video {
+  height: 70px;
+  width: 70px;
+  margin-top: -56px;
+  margin-left: 20px;
+  border: 2px solid black;
+  object-fit: cover;
+  background: #222222;
+  z-index: 1000;
+
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+}
+
+.contain i {
+  color: white;
+  z-index: 500;
+}
+.contain i:hover {
+  cursor: pointer;
+  transform: translateY(4%);
+}
+.icon {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.localControls {
+}
+
+.icon .iconSet {
+  display: flex;
+  min-width: 130px;
+}
+
+.icon .iconSet div {
+  display: inline-block;
+  margin-left: 0%;
+}
+
+.icon .iconSet img {
+  width: 50px;
+  margin-top: 10px;
+}
+
+.popupMsg {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 40%;
+  width: 40%;
+  height: max-content;
+  text-align: center;
+  background-color: yellow;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+  animation: move 9s;
+  top: 10px;
+  color: black;
+  opacity: 0.6;
+}
+
+.popupMsg p {
+  color: black;
+  font-size: 1em;
+  z-index: 500;
+  opacity: 0.6;
+  padding: 10px;
+}
+
+.emojiAnimation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 30%;
+  z-index: 400;
+  animation: moving 8s;
+}
+.emojiAnimation2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 45%;
+  z-index: 400;
+  animation: moving 6s;
+}
+.emojiAnimation3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 55%;
+  z-index: 400;
+  animation: moving 9s;
+}
+@keyframes move {
+  0% {
+    margin-top: -10%;
+  }
+  50% {
+    margin-top: -60%;
+  }
+  75% {
+    margin-top: -200%;
+  }
+  100% {
+    margin-top: -500%;
+  }
+}
+@keyframes moving {
+  0% {
+    bottom: 0%;
+  }
+  /* 50%{bottom: 60%;} */
+  100% {
+    bottom: 200%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contain {
+    height: 65px;
+  }
+  .contain video {
+    height: 120px;
+    width: 120px;
+    margin-top: -75px;
+  }
+  .contain i {
+    font-size: 35px;
+  }
+  .popupMsg {
+    margin-left: 45%;
+  }
+}
+
+.goLiveButton a {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: white;
+
+  z-index: 400;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.goLiveButton .muteAll {
+  background: darkgoldenrod !important;
+  color: black;
+  border-radius: 10%;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 550px) {
+  .icon .iconSet {
+    min-width: 130px;
+  }
+
+  .goLiveButton .muteAll {
+    background: darkgoldenrod !important;
+    color: black;
+    border-radius: 10%;
+    position: fixed;
+    top: 20%;
+    height: 30px;
+    line-height: 30px;
+  }
+}
